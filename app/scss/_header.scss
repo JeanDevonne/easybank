@@ -1,0 +1,119 @@
+.header {
+  z-index: 10;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: $white;
+  nav {
+    padding-top: 1.0625rem; // altura de nav
+    padding-bottom: 1.0625rem; // altura de nav
+    background: $white;
+  }
+  &__logo {
+    img {
+      width: 8.8125rem;
+      height: 1.375rem;
+    }
+  }
+
+  &__toggle {
+    // Mobile Menu hamburger
+    > span {
+      display: block;
+      width: 26px;
+      height: 2px;
+      background-color: $darkBlue;
+      transition: all 300ms ease-in-out;
+      transform-origin: 3px 1px;
+
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
+    }
+  }
+  &__menu {
+    // border: 1px solid red;
+    position: absolute;
+    width: calc(100% - 3rem);
+    margin-top: calc(2rem + 5px + 1.5rem);
+    background: white;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    padding: 1.625rem;
+    a {
+      color: $darkBlue;
+      padding: 0.625rem;
+      display: block;
+      text-align: center;
+    }
+  }
+
+  &__links {
+    a {
+      position: relative;
+      transition: color 300ms ease-in-out;
+      font-size: $font-sm;
+      color: $grayishBlue;
+      // margin-right: 32px;
+      &:not(:last-child) {
+        margin-right: 32px;
+      }
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 5px;
+        left: 0;
+        right: 0;
+        bottom: -30px;
+        background: linear-gradient(to right, $limeGreen, $brightCyan);
+        opacity: 0;
+        transition: opacity 300ms ease-in-out;
+      }
+      &:hover {
+        color: $darkBlue;
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.header {
+  // Hamburger Open styles
+  &.open {
+    // .overlay {
+    //   display: block; //esto no debe estar en la animacion
+    // }
+
+    .header__toggle {
+      > span:first-child {
+        transform: rotate(45deg);
+      }
+
+      > span:nth-child(2) {
+        opacity: 0;
+      }
+
+      > span:last-child {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+
+.overlay {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  background-image: linear-gradient($darkBlue, transparent);
+  top: 3.75rem;
+  // top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
