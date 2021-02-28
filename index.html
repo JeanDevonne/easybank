@@ -15,6 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400&display=swap"
       rel="stylesheet"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- aqui van los estilos -->
     <link rel="stylesheet" href="css/style.css" />
 
@@ -82,7 +83,7 @@
         </p>
         <div class="feature__grid">
           <!-- primero -->
-          <div class="feature__item">
+          <div class="feature__item" data-aos="zoom-in">
             <img src="./images/icon-online.svg" alt="online" />
             <h3>Online Bank</h3>
             <p>
@@ -91,7 +92,7 @@
             </p>
           </div>
           <!-- segundo -->
-          <div class="feature__item">
+          <div class="feature__item" data-aos="zoom-in">
             <img src="./images/icon-budgeting.svg" alt="online" />
             <h3>Simple Budgeting</h3>
             <p>
@@ -100,7 +101,7 @@
             </p>
           </div>
           <!-- tercero -->
-          <div class="feature__item">
+          <div class="feature__item" data-aos="zoom-in">
             <img src="./images/icon-onboarding.svg" alt="online" />
             <h3>Fast Onboarding</h3>
             <p>
@@ -109,7 +110,7 @@
             </p>
           </div>
           <!-- cuarto -->
-          <div class="feature__item">
+          <div class="feature__item" data-aos="zoom-in">
             <img src="./images/icon-api.svg" alt="online" />
             <h3>Open API</h3>
             <p>
@@ -125,7 +126,7 @@
         <h2 class="latest-article__title">Latest Articles</h2>
         <div class="latest-article__grid">
           <!-- primero -->
-          <article class="article">
+          <article class="article" data-aos="zoom-in">
             <div class="article__img">
               <img src="./images/image-currency.jpg" alt="currency" />
             </div>
@@ -143,7 +144,7 @@
             </div>
           </article>
           <!-- segundo -->
-          <article class="article">
+          <article class="article" data-aos="zoom-in">
             <div class="article__img">
               <img src="./images/image-restaurant.jpg" alt="currency" />
             </div>
@@ -161,7 +162,7 @@
             </div>
           </article>
           <!-- tercero -->
-          <article class="article">
+          <article class="article" data-aos="zoom-in">
             <div class="article__img">
               <img src="./images/image-plane.jpg" alt="plane" />
             </div>
@@ -179,7 +180,7 @@
             </div>
           </article>
           <!-- cuarto  -->
-          <article class="article">
+          <article class="article" data-aos="zoom-in">
             <div class="article__img">
               <img src="./images/image-confetti.jpg" alt="confetti" />
             </div>
@@ -243,5 +244,9 @@
 
   
     <script src="./app/js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
